@@ -1,0 +1,137 @@
+\documentclass[10pt, titlepage, oneside, a4paper]{article}
+
+\usepackage[swedish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{ucs}
+
+% Math
+\usepackage{amsmath}
+\usepackage{mathcomp}
+
+% Layout handling
+\usepackage{chngpage}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage{float}
+
+% for drawing graphs
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[framemethod=TikZ]{mdframed}
+% select libraries within tikz
+\usetikzlibrary{shapes,arrows}
+
+% default arrows
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
+
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+
+\selectlanguage{swedish}
+
+% Paragraph and section handling
+\usepackage[margin={2cm, 3.5cm, 3cm, 3cm}]{geometry}
+\usepackage{amssymb, graphicx, fancyhdr}
+\addtolength{\textheight}{20mm}
+\addtolength{\voffset}{-5mm}
+\renewcommand{\sectionmark}[1]{\markleft{#1}}
+
+\newcommand{\Section}[1]{\section{#1}\vspace{-8pt}}
+\newcommand{\Subsection}[1]{\vspace{-4pt}\subsection{#1}\vspace{-8pt}}
+\newcommand{\Subsubsection}[1]{\vspace{-4pt}\subsubsection{#1}\vspace{-8pt}}
+	
+\newcounter{appendixpage}
+
+\newenvironment{appendices}{
+	\setcounter{appendixpage}{\arabic{page}}
+	\stepcounter{appendixpage}
+}
+
+\newcommand{\appitem}[2]{
+	\stepcounter{section}
+	\addtocontents{toc}{\protect\contentsline{section}{\numberline{\Alph{section}}#1}{\arabic{appendixpage}}}
+	\addtocounter{appendixpage}{#2}
+}
+
+\newcommand{\appsubitem}[2]{
+	\stepcounter{subsection}
+	\addtocontents{toc}{\protect\contentsline{subsection}{\numberline{\Alph{section}.\arabic{subsection}}#1}{\arabic{appendixpage}}}
+	\addtocounter{appendixpage}{#2}
+}
+
+
+\def\course{TSIT03}
+\def\title{Lecture Notes}
+\def\name{Rasmus Holm}
+\def\username{rasho381}
+\def\email{\username{}@student.liu.se}
+
+\def\fullpath{\raisebox{1pt}{$\scriptstyle \sim$}\username/\path}
+
+\begin{document}
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\begin{large}
+			\begin{tabular}{@{}p{\textwidth}@{}}
+				\textbf{\hfill \today} \\
+			\end{tabular}
+		\end{large}
+		\vspace{10mm}
+		\begin{center}
+      \LARGE{\course} \\
+			\huge{\textbf{\title}}\\
+			\vspace{25mm}
+			\begin{large}
+				\begin{tabular}{ll}
+                    \textbf{Name} & \name\ \\[6pt]
+					\textbf{E-mail} & \texttt{\email} \\
+				\end{tabular}
+			\end{large}  
+			\vfill
+		\end{center}
+	\end{titlepage}
+
+	\lfoot{\footnotesize{\name, \email } }
+	\rfoot{\footnotesize{\today}}
+	\lhead{\sc\footnotesize\title}
+	\rhead{\nouppercase{\sc\footnotesize\leftmark}}
+	\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.2pt}
+	\renewcommand{\footrulewidth}{0.2pt}
+
+	\pagenumbering{roman}
+	
+	\newpage
+
+	\pagenumbering{arabic}
+
+	\setlength{\parindent}{0pt}
+	\setlength{\parskip}{10pt}
+	
+
+  
+\input{lecture2}
+\input{lecture3}
+\input{lecture4}
+\input{lecture5}
+
+\end{document}

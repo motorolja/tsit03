@@ -1,0 +1,68 @@
+\section{Lecture 5}
+
+\textbf{AES:}\\
+\begin{itemize}
+\item Whitening - adding the roundkey (read)
+\item \(x^{-1}\) is hard to estimate with a linearsystem.
+\item Finite fields (Galois Fields, GF)
+\item Can be done with binary muliplications and additions
+\item Has protection against partial knowledge of the key
+\item AES has been broken but not terrible broken
+\end{itemize}
+
+\textbf{Blowfish}, is broken since it is a 64 bit block cipher.
+
+\subsection{Modes of operation}
+\begin{itemize}
+\item{ECB (Electronic Code Book):
+  }
+
+\item{CBC (Cipher Block Chaining):
+    \begin{itemize}
+    \item Sees if there are noise or tampering since the decryption will fail.
+    \item Dont use a fixed initialization vector (IV)
+    \end{itemize}
+  }
+\item{CFB (Cipher FeedBack):
+    
+  }
+
+\item{OFB (Output FeedBack)
+    
+  }
+\item{CTR (Counter Mode):
+
+  }
+
+  
+\end{itemize}
+
+\subsection{Message Authentication Code}
+\begin{itemize}
+  \item{An ideal MAC should behave as a random mapping from all possible inputs
+      to all possible tags.}
+    \item{This requires using a secret key.}
+\item{CBC-MAC (CBC message authentication code):
+    \begin{itemize}
+    \item{Dont use the same key for encryption and authentication}
+    \item{Birthday attack on CBC-MAC:
+        See sweet32.info
+      }
+    \item{Length attack on CBC-MAC:
+        See slide lecture 5
+      }
+    \end{itemize}
+
+  }
+\item{CMAC:
+    
+
+  }
+\item{The Horton Principle:
+    \begin{itemize}
+      \item{Authenticate what is meant, not what is said}
+     \end{itemize}
+   }
+\item{AES-CGM is broken, check blackhat article about it from 2016 Sean Devlin
+    and Hannon B\"{o}ck}
+\end{itemize}

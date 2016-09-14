@@ -1,0 +1,14 @@
+Substitution
+  * Every crypto letter will occur exactly as often as its plaintext counterpart
+  * Every combination of crypto letters will occur as often in the corresponding 
+  * Count how often letters, bigrams and trigrams occur in the cryptogram and try
+    to identify the ones corresponding to common plaintext letters and common combinations.
+  * Fill in so remaining gaps form words.
+  
+Vigenere
+  * The letters depend on the plaintext and position
+  * The same pais of diagrams are often created by common plaintext hitting the same position in the key.
+  *  
+
+Transposition
+  * 
