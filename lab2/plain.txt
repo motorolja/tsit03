@@ -1,0 +1,28 @@
+#
+# /etc/hosts: static lookup table for host names
+#
+
+#<ip-address>	<hostname.domain.org>	<hostname>
+127.0.0.1		localhost
+::1			localhost
+
+130.236.254.194		muspaj.lysator.liu.se	muspaj
+2001:6b0:17:f0a0::c2	muspaj.lysator.liu.se	muspaj
+
+130.236.254.1		liunet-gw.lysator.liu.se	liunet-gw
+130.236.254.2		ns-master.lysator.liu.se	ns-master
+130.236.254.4		ns-slave.lysator.liu.se		ns-slave
+130.236.254.5		ns.lysator.liu.se		ns
+2001:6b0:17:f0a0::5	ns.lysator.liu.se		ns
+130.236.254.7		nis.lysator.liu.se		nis
+2001:6b0:17:f0a0::7	nis.lysator.liu.se		nis
+130.236.254.25		hoover.lysator.liu.se		hoover loghost
+130.236.254.125		as-master.lysator.liu.se	as-master
+130.236.254.126		as-slave.lysator.liu.se		as-slave
+130.235.254.225		resolver.lysator.liu.se		resolver
+2001:6b0:17:f0a0::e1	resolver.lysator.liu.se		resolver
+
+130.236.254.222 vindbrygga.lysator.liu.se vindbrygga
+2001:6b0:17:f0a0::de vindbrygga.lysator.liu.se vindbrygga
+
+# End of file

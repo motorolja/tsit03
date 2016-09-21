@@ -1,0 +1,71 @@
+
+\begin{itemize}
+\item{\textit{What is you user ID constructed from?}
+
+    email
+  }
+\item{\textit{What are the permissions for ``.gnupg'' and what do they mean?}
+
+    Should be 700, only owner should be able to read/use/traverse the gpg related
+    files/folders (sockets, keyring, etc)
+  }
+\item{\textit{Is it a good idea to store the revocation certificate on the same
+      device as your key-pair?}
+
+    As long as it is not the only place it is stored it should be fine, if it is
+    the only place it is stored then no. You should always be able to revoke
+    your key incase it gets compromised/lost. A revocation certificate makes the
+    key-pair invalid from there on, though that is not to say that people will
+    not use it for communication (e.g. a user not refreshing keys in their
+    keyring). 
+  }
+\item{\textit{What were those messages transmitted and received from the
+other lab group? \(If they are long, show them onscreen to the assistant\)}
+#
+# /etc/hosts: static lookup table for host names
+#
+
+#<ip-address>	<hostname.domain.org>	<hostname>
+127.0.0.1		localhost
+::1			localhost
+
+130.236.254.194		muspaj.lysator.liu.se	muspaj
+2001:6b0:17:f0a0::c2	muspaj.lysator.liu.se	muspaj
+
+130.236.254.1		liunet-gw.lysator.liu.se	liunet-gw
+130.236.254.2		ns-master.lysator.liu.se	ns-master
+130.236.254.4		ns-slave.lysator.liu.se		ns-slave
+130.236.254.5		ns.lysator.liu.se		ns
+2001:6b0:17:f0a0::5	ns.lysator.liu.se		ns
+130.236.254.7		nis.lysator.liu.se		nis
+2001:6b0:17:f0a0::7	nis.lysator.liu.se		nis
+130.236.254.25		hoover.lysator.liu.se		hoover loghost
+130.236.254.125		as-master.lysator.liu.se	as-master
+130.236.254.126		as-slave.lysator.liu.se		as-slave
+130.235.254.225		resolver.lysator.liu.se		resolver
+2001:6b0:17:f0a0::e1	resolver.lysator.liu.se		resolver
+
+130.236.254.222 vindbrygga.lysator.liu.se vindbrygga
+2001:6b0:17:f0a0::de vindbrygga.lysator.liu.se vindbrygga
+
+# End of file
+
+
+    
+  }
+\item{\textit{At what time was this document signed?}
+        Signature made Fri 09 Sep 2016 20:50:30 CEST using RSA key ID 239AD40D
+    
+  }
+\item{\textit{Can you be sure that the key belongs to the assistant?}
+    No, because I have not verified the validity of the key. Meaning I do not
+    know 
+  }
+\item{\textit{Have you returned the signed keys in your keyring?}
+
+    Yes, check my other keys (knase@lysator.liu.se)
+    
+}
+
+
+\end{itemize}
